@@ -1,3 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.diagonal-lines {
+  position: relative;
+  min-width: 100px; /* Adjust width as needed */
+  min-height: 20px; /* Adjust height as needed */
+}
+
+.diagonal-lines::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.896),
+    white 4px,
+    /* Adjust thickness of white lines */ transparent 5px,
+    transparent 8px /* Adjust the spacing between lines */
+  );
+  opacity: 0.5; /* Adjust opacity if needed */
+  pointer-events: none; /* Ensure the lines don't interfere with other content */
+}
+
+.diagonal-lines_B {
+  position: relative;
+  min-width: 100px; /* Adjust width as needed */
+  min-height: 20px; /* Adjust height as needed */
+}
+
+.diagonal-lines_B::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgb(38, 92, 76),
+    rgb(38, 92, 76) 5px,
+    /* Adjust thickness of white lines */ transparent 5px,
+    transparent 8px /* Adjust the spacing between lines */
+  );
+  opacity: 0.5; /* Adjust opacity if needed */
+  pointer-events: none; /* Ensure the lines don't interfere with other content */
+}
+
+.diagonal-lines_C {
+  position: relative;
+  min-width: 100px; /* Adjust width as needed */
+  min-height: 20px; /* Adjust height as needed */
+}
+
+.diagonal-C::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    white,
+    white 5px,
+    /* Adjust thickness of white lines */ transparent 5px,
+    transparent 8px /* Adjust the spacing between lines */
+  );
+  opacity: 0.5; /* Adjust opacity if needed */
+  pointer-events: none; /* Ensure the lines don't interfere with other content */
+}
