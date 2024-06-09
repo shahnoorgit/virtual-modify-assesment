@@ -1,8 +1,15 @@
 "use client";
+import LineChart from "@/components/Chart";
+import ProjectTable from "@/components/Table";
 import Image from "next/image";
 import { useState } from "react";
 import { CiCirclePlus, CiImageOn } from "react-icons/ci";
+import { FaStarOfLife } from "react-icons/fa";
+import { GiRainbowStar, GiStarShuriken } from "react-icons/gi";
+import { IoMdSunny } from "react-icons/io";
 import { IoVideocamOutline } from "react-icons/io5";
+import { LiaCoinsSolid } from "react-icons/lia";
+import { MdArrowOutward, MdStar } from "react-icons/md";
 import { TbMusicStar } from "react-icons/tb";
 import { VscBellDot } from "react-icons/vsc";
 
@@ -208,17 +215,150 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-full h-1/2 overflow-hidden bg-white md:p-6">
+        <div className="w-full h-1/2 overflow-hidden bg-white md:p-3">
           <div className="w-full flex gap-10 h-full overflow-hidden bg-white">
-            <div className="h-full flex flex-col gap-5 w-1/3">
-              <div className=" w-full flex justify-between border-black h-[15%] border-b">
+            {" "}
+            <div className="h-full  items-center flex flex-col gap-1 w-1/3">
+              <div className=" w-full flex justify-between border-black border-b">
                 <span className=" font-bold text-2xl">Team Activity</span>
                 <div className=" flex gap-3 justify-center items-center">
-                  hi
+                  <div className="flex gap-[-8px]">
+                    <div className="bg-green-500 flex justify-center items-center border h-8 w-8 rounded-full -ml-4">
+                      <Image
+                        src={"/profile.webp"}
+                        alt="user"
+                        className="object-contain rounded-full"
+                        height={45}
+                        width={45}
+                      />
+                    </div>
+                    <div className="bg-green-500 border h-8 w-8 rounded-full -ml-4">
+                      <Image
+                        src={"/profile.webp"}
+                        alt="user"
+                        className="object-contain rounded-full"
+                        height={45}
+                        width={45}
+                      />
+                    </div>
+                    <div className="bg-green-500 border h-8 w-8 rounded-full -ml-4">
+                      <Image
+                        src={"/profile.webp"}
+                        alt="user"
+                        className="object-contain rounded-full"
+                        height={45}
+                        width={45}
+                      />
+                    </div>
+                    <div className="bg-green-500 border h-8 w-8 rounded-full -ml-4">
+                      <span className=" font-light text-gray-300">+12</span>
+                    </div>
+                  </div>
+                  <div className=" flex justify-center items-center h-8 w-8 rounded-full bg-yellow-300">
+                    <CiCirclePlus />
+                  </div>
+                  <MdArrowOutward className=" text-2xl text-gray-600" />
+                </div>
+              </div>
+              <div className=" w-full h-full flex flex-col gap-1">
+                <div className=" flex w-full flex-col gap-3">
+                  <div className=" flex w-full flex-col gap-1">
+                    <div className=" flex justify-start items-center gap-2">
+                      <FaStarOfLife className=" text-green-600 text-xl" />
+                      <span className=" text-gray-400 text-md font-medium">
+                        Wimpsy
+                      </span>
+                    </div>
+                    <div className="flex gap-0 justify-start items-end">
+                      <Image
+                        src={"/profile.webp"}
+                        alt="user"
+                        className="object-contain z-50 rounded-full"
+                        height={35}
+                        width={35}
+                      />
+                      <div className="w-[60%] h-[100%] z-20 -ml-5 bg-green-800 diagonal-lines" />
+                      <div className="w-[40%] absolute bottom-0 h-[70%] -ml-5 bg-green-500 diagonal-lines" />
+                    </div>
+                  </div>
+                  <div className=" flex w-full flex-col gap-1">
+                    <div className=" flex justify-start items-center gap-2">
+                      <IoMdSunny className=" text-yellow-400 text-2xl" />
+                      <span className=" text-gray-400 text-md font-medium">
+                        DoodleVerse
+                      </span>
+                    </div>
+                    <div className="flex gap-0 justify-start items-end">
+                      <Image
+                        src={"/profile.webp"}
+                        alt="user"
+                        className="object-contain z-50 rounded-full"
+                        height={35}
+                        width={35}
+                      />
+                      <div className="w-[30%] h-[100%] z-20 -ml-5 bg-yellow-600 diagonal-lines" />
+                      <div className="w-[70%] absolute bottom-0 h-[70%] -ml-5 bg-yellow-500 diagonal-lines" />
+                    </div>
+                  </div>
+                  <div className=" flex w-full flex-col gap-1">
+                    <div className=" flex justify-start items-center gap-2">
+                      <MdStar className=" text-gray-400 text-2xl" />
+                      <span className=" text-gray-400 text-md font-medium">
+                        SparkleCraft
+                      </span>
+                    </div>
+                    <div className="flex gap-0 justify-start items-end">
+                      <Image
+                        src={"/profile.webp"}
+                        alt="user"
+                        className="object-contain z-50 rounded-full"
+                        height={35}
+                        width={35}
+                      />
+                      <div className="w-[50%] h-[100%] z-20 -ml-5 bg-gray-500 diagonal-lines" />
+                      <div className="w-[50%] absolute bottom-0 h-[70%] -ml-5 bg-gray-300 diagonal-lines" />
+                    </div>
+                  </div>
+                  <div className=" flex w-full flex-col gap-1">
+                    <div className=" flex justify-start items-center gap-2">
+                      <GiRainbowStar className=" text-gray-400 text-2xl" />
+                      <span className=" text-gray-400 text-md font-medium">
+                        Wonderwave
+                      </span>
+                    </div>
+                    <div className="flex gap-0 justify-start items-end">
+                      <Image
+                        src={"/profile.webp"}
+                        alt="user"
+                        className="object-contain z-50 rounded-full"
+                        height={35}
+                        width={35}
+                      />
+                      <div className="w-[90%] h-[100%] z-20 -ml-5 bg-black diagonal-lines" />
+                      <div className="w-[10%] absolute bottom-0 h-[70%] -ml-5 bg-gray-700 diagonal-lines" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="h-full w-2/3 bg-slate-100">2</div>
+            <div className="h-full  items-center flex flex-col gap-1 w-2/3">
+              <div className=" w-full flex justify-between items-center border-black  border-b">
+                <span className=" font-bold text-2xl">Revenue</span>
+                <LiaCoinsSolid className=" text-xl" />
+              </div>
+              <div className=" flex flex-col justify-start items-start w-full h-[60%]">
+                <span className=" mt-1 font-semibold text-gray-400">
+                  Memory Usage
+                </span>
+                <span className=" text-4xl font-semibold">52.7trb</span>
+                <div className=" w-full h-full">
+                  <LineChart />
+                </div>
+              </div>
+              <div className=" w-full h-36 border-t border-1 -mt-5 border-gray-600">
+                <ProjectTable />
+              </div>
+            </div>
           </div>
         </div>
       </div>
